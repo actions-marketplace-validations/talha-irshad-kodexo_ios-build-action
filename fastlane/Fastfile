@@ -169,7 +169,7 @@ platform :ios do
 
   # def resolve_recursive_build_setting(config, setting)
   def resolve_recursive_build_setting(config, setting)
-    resolution = resolve_recursive_build_setting(config, 'PRODUCT_BUNDLE_IDENTIFIER')
+    resolution = resolve_recursive_build_setting(config, ENV['PRODUCT_BUNDLE_IDENTIFIER'])
 
     # finds values with one of
     # $VALUE

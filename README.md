@@ -147,20 +147,21 @@ Welcome your contributions!
 ### single p12
 
 ```yaml
-- uses: yukiarrr/ios-build-action@v1.5.0
+- uses: talha-irshad-kodexo/ios-build-action@v1.0.1
   with:
     project-path: Unity-iPhone.xcodeproj
     p12-base64: ${{ secrets.P12_BASE64 }}
     mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
     code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
     team-id: ${{ secrets.TEAM_ID }}
+    project-bundle-identifier: ${{ secrets.PRODUCT_BUNDLE_IDENTIFIER }}
     workspace-path: Unity-iPhone.xcworkspace # optional
 ```
 
 ### key and cert
 
 ```yaml
-- uses: yukiarrr/ios-build-action@v1.5.0
+- uses: talha-irshad-kodexo/ios-build-action@v1.0.1
   with:
     project-path: Unity-iPhone.xcodeproj
     p12-key-base64: ${{ secrets.P12_KEY_BASE64 }}
@@ -168,5 +169,6 @@ Welcome your contributions!
     mobileprovision-base64: ${{ secrets.MOBILEPROVISION_BASE64 }}
     code-signing-identity: ${{ secrets.CODE_SIGNING_IDENTITY }}
     team-id: ${{ secrets.TEAM_ID }}
+    project-bundle-identifier: ${{ secrets.PRODUCT_BUNDLE_IDENTIFIER }}
     workspace-path: Unity-iPhone.xcworkspace # optional
 ```
