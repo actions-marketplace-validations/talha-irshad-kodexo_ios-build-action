@@ -166,8 +166,10 @@ platform :ios do
   # https://github.com/CocoaPods/Xcodeproj/issues/505#issuecomment-584699008
   # Augments config.resolve_build_setting from xcproject
   # to continue expanding build settings and evaluate modifiers
+
+  # def resolve_recursive_build_setting(config, setting)
   def resolve_recursive_build_setting(config, setting)
-    resolution = config.resolve_build_setting(setting)
+    resolution = resolve_recursive_build_setting(config, 'PRODUCT_BUNDLE_IDENTIFIER')
 
     # finds values with one of
     # $VALUE
